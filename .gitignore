@@ -1,4 +1,4 @@
 .rvmrc
 /.bundle
-vendor/bundle
+/vendor/bundle
 
