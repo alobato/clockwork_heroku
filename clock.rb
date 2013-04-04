@@ -6,4 +6,4 @@ handler do |job|
   puts job
 end
 
-every(1.minute, 'job')
+every(1.day, 'job')
