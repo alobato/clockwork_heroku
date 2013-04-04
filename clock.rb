@@ -1,5 +1,4 @@
 # https://gist.github.com/tomykaira/1312172
-require 'net/http'
 require 'clockwork'
 include Clockwork
 
