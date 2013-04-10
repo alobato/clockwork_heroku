@@ -21,7 +21,7 @@ handler do |job|
 
   if job == 'ruby_ram'
     ruby_ram = URI.parse('http://al-123board.herokuapp.com/metrics/6.txt').read.gsub("\n", '')
-    if ruby_ram.to_f > 130
+    if ruby_ram.to_f > 140
       Net::HTTP.post_form(URI.parse('http://api.prowlapp.com/publicapi/add'), { apikey: '9e6b86dec361a6c01080d481ba18974a2e38f4e4', application: 'lb', event: 'Ruby RAM', description: ruby_ram, priority: 0 }) rescue nil
     end
   end
