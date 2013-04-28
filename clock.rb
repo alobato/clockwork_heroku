@@ -35,7 +35,7 @@ handler do |job|
 
   if job == 'mysql_memory'
     mysql_memory = URI.parse('http://al-123board.herokuapp.com/metrics/7.txt').read.gsub("\n", '')
-    if mysql_memory.to_f > 22
+    if mysql_memory.to_f > 23
       Net::HTTP.post_form(URI.parse('http://api.prowlapp.com/publicapi/add'), { apikey: '9e6b86dec361a6c01080d481ba18974a2e38f4e4', application: 'lb', event: 'mysql_memory', description: mysql_memory, priority: 0 }) rescue nil
     end
   end
